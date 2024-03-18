@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Tag Example Page</title>
+    <link rel="stylesheet" href="headerStyle.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            margin-top: 1em;
+            /* margin: 1em; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1em;
+            &:has(.image-container:hover) > .image-container:not(.image-container:hover) {
+                transform: scale(.98);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        h1 {
+            width: 100%;
+        }
+
+        .image-container {
+            width: 250px;
+            height: 250px;
+            padding: 1rem;
+            border: 2px solid rgb(50, 50, 50);
+            border-radius: .5em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box shadow */
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.02);
+                transition: all 0.3s ease-in-out;
+                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increased box shadow on hover */
+            }
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+            height: auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="homePage.html">Home</a>
+            <a href="formTag.html">Form Tag</a>
+            <a href="imgTag.html">Image Tag</a>
+            <a href="listTag.html">List Tag</a>
+            <a href="tableTag.html">Table Tag</a>
+        </nav>
+    </header>
+    <h1>Image Tag Example Page</h1>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" alt="HTML Logo">
+            <p>HTML - HyperText Markup Language</p>
+        </div>
+
+        <div class="image-container">
+            <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS Logo">
+            <p>CSS - Cascading Style Sheets</p>
+        </div>
+
+        <div class="image-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo">
+            <p>JavaScript - Programming Language</p>
+        </div>
+
+        <div class="image-container">
+            <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React Logo">
+            <p>React - JavaScript Library</p>
+        </div>
+
+        <div class="image-container">
+            <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="Node.js Logo">
+            <p>Node.js - JavaScript Runtime</p>
+        </div>
+
+        <div class="image-container">
+            <img src="https://cdn.worldvectorlogo.com/logos/express-109.svg" alt="Express Logo">
+            <p>Express - Node.js Framework</p>
+        </div>
+    </div>
+</body>
+
+</html>
